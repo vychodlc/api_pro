@@ -1,0 +1,58 @@
+POST http://127.0.0.1:6880/api/goods/input
+Content-Type: application/json
+
+{
+  "cost": 600,
+  "created_at": "2024-05-13 09:48:31",
+  "from_address": "23123",
+  "from_id": 37,
+  "from_name": "李昶1",
+  "from_phone": "2123",
+  "pay": 0,
+  "pay_log": "",
+  "status": 0
+}
+
+###
+GET http://127.0.0.1:6880/api/goods/input
+
+###
+GET http://127.0.0.1:6880/api/goods/input?current=1&pageSize=10
+
+###
+GET http://127.0.0.1:6880/api/goods/input?current=1&pageSize=10&phone=188823823828
+
+###
+GET http://127.0.0.1:6880/api/goods/input/item?order_id=16
+###
+POST http://127.0.0.1:6880/api/goods/input/item
+Content-Type: application/json
+
+{
+  "table": [
+    {
+      "id": 1,
+      "order_id": 222222,
+      "length": 122,
+      "diameter": 3,
+      "unit": 300,
+      "price": 0.12,
+      "total": 221,
+      "amount": 22,
+      "state": 0,
+      "created_at": "2024-01-22"
+    },
+    {
+      "id": 2,
+      "order_id": 222222,
+      "length": 122,
+      "diameter": 3,
+      "unit": 300,
+      "price": 0.12,
+      "total": 221,
+      "amount": 22,
+      "state": 0,
+      "created_at": "2024-01-22"
+    }
+  ]
+}

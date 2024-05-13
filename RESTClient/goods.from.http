@@ -1,0 +1,30 @@
+POST http://127.0.0.1:6880/api/goods/from
+Content-Type: application/json
+
+{
+  "name": "d232d22d",
+  "address": "北333京市22朝222阳区",
+  "phone": "13800138000"
+}
+
+###
+GET http://127.0.0.1:6880/api/goods/from
+
+###
+GET http://127.0.0.1:6880/api/goods/from?current=1&pageSize=10
+
+###
+GET http://127.0.0.1:6880/api/goods/from?current=1&pageSize=10&phone=188823823828
+
+###
+PUT http://127.0.0.1:6880/api/goods/from/1
+Content-Type: application/json
+
+{
+  "name": "修222改后的222222名字2222",
+  "address": "修改后的地址",
+  "phone": "13800138000"
+}
+
+###
+DELETE http://127.0.0.1:6880/api/goods/from/1

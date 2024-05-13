@@ -1,0 +1,13 @@
+POST http://127.0.0.1:6880/api/account
+Content-Type: application/json
+
+{
+  "type": "input_pay",
+  "order_id": 1323,
+  "method": "alipay",
+  "amount": 100,
+  "another_id": 1231
+}
+
+###
+GET http://127.0.0.1:6880/api/account

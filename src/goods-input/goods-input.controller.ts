@@ -40,6 +40,8 @@ export class GoodsInputController {
     @Param('id') id: number,
     @Body() updateGoodsInputDto: UpdateGoodsInputDto,
   ) {
+    console.log('updateGoodsInputDto', updateGoodsInputDto);
+
     return this.goodsInputService.update(id, updateGoodsInputDto);
   }
 

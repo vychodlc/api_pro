@@ -41,6 +41,7 @@ export class GoodsFromController {
     @Query('name') name?: string,
     @Query('address') address?: string,
     @Query('phone') phone?: string,
+    @Query('type') type?: string,
   ) {
     return this.goodsFromService.pageQuery({
       pageSize,
@@ -48,6 +49,7 @@ export class GoodsFromController {
       name,
       address,
       phone,
+      type,
     });
   }
 }

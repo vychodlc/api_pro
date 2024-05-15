@@ -27,12 +27,14 @@ export class GoodsFromService {
     name: string;
     address: string;
     phone: string;
+    type: string;
   }) {
-    const { pageSize, current, name, address, phone } = params;
+    const { pageSize, current, name, address, phone, type } = params;
     const queryFilter: any = {};
     if (name) queryFilter.name = Like(`%${name}%`);
     if (address) queryFilter.address = Like(`%${address}%`);
     if (phone) queryFilter.phone = Like(`%${phone}%`);
+    if (type) queryFilter.type = type;
     const [data, total] = await this.goodsFromRepository.findAndCount({
       where: queryFilter,
       order: { created_at: 'DESC' },

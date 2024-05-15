@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { GoodsFromModule } from './goods-from/goods-from.module';
 import { GoodsInputModule } from './goods-input/goods-input.module';
 import { AccountModule } from './account/account.module';
+import { GoodsOutputModule } from './goods-output/goods-output.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { AccountModule } from './account/account.module';
     GoodsFromModule,
     GoodsInputModule,
     AccountModule,
+    GoodsOutputModule,
   ],
   controllers: [AppController],
   providers: [AppService],

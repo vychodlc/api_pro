@@ -3,4 +3,5 @@ export class CreateGoodsFromDto {
   address: string;
   phone: string;
   created_at: Date;
+  type: string;
 }
